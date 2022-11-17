@@ -122,7 +122,7 @@
                     id="firstDayOfWeek"
                     label="Appointment Date"
                     placeholder="Appointment Date"
-                    first-day="1"
+                    first-day-of-week="1"
                     wire:model="firstDayOfWeek"
                 />
             </div>
@@ -200,19 +200,19 @@
         </div>
 
         <x-options-table class="mt-2 mb-6 w-full">
-            <x-option-table-row prop="clearable"        required="false" default="true"  type="boolean" available="boolean" />
-            <x-option-table-row prop="without-tips"     required="false" default="false" type="boolean" available="boolean" />
-            <x-option-table-row prop="without-timezone" required="false" default="false" type="boolean" available="boolean" />
-            <x-option-table-row prop="without-time"     required="false" default="false" type="boolean" available="boolean" />
-            <x-option-table-row prop="interval"         required="false" default="10" type="string|number" available="boolean" />
-            <x-option-table-row prop="time-format"      required="false" default="12" type="string"        available="12|24" />
-            <x-option-table-row prop="first-day"        required="false" default="0" type="number"        available="Day of week (0-6)" />
-            <x-option-table-row prop="timezone"         required="false" default="UTC" type="string" available="All js available timezones" />
-            <x-option-table-row prop="user-timezone"    required="false" default="real user timezone" type="string" available="All js available timezones" />
-            <x-option-table-row prop="parse-format"     required="false" default="ISO8601" type="string" available="All dayjs formats" />
-            <x-option-table-row prop="display-format"   required="false" default="localeFormat" type="string" available="All dayjs formats" />
-            <x-option-table-row prop="min"              required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
-            <x-option-table-row prop="max"              required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
+            <x-option-table-row prop="clearable"         required="false" default="true"  type="boolean" available="boolean" />
+            <x-option-table-row prop="without-tips"      required="false" default="false" type="boolean" available="boolean" />
+            <x-option-table-row prop="without-timezone"  required="false" default="false" type="boolean" available="boolean" />
+            <x-option-table-row prop="without-time"      required="false" default="false" type="boolean" available="boolean" />
+            <x-option-table-row prop="interval"          required="false" default="10" type="string|number" available="boolean" />
+            <x-option-table-row prop="time-format"       required="false" default="12" type="string"        available="12|24" />
+            <x-option-table-row prop="first-day-of-week" required="false" default="0" type="number"        available="Day of week (0-6)" />
+            <x-option-table-row prop="timezone"          required="false" default="UTC" type="string" available="All js available timezones" />
+            <x-option-table-row prop="user-timezone"     required="false" default="real user timezone" type="string" available="All js available timezones" />
+            <x-option-table-row prop="parse-format"      required="false" default="ISO8601" type="string" available="All dayjs formats" />
+            <x-option-table-row prop="display-format"    required="false" default="localeFormat" type="string" available="All dayjs formats" />
+            <x-option-table-row prop="min"               required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
+            <x-option-table-row prop="max"               required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
         </x-options-table>
 
         <p class="text-gray-500">Read more about <a class="text-indigo-700 underline" target="_blank" href="https://day.js.org/docs/en/display/format">Dayjs formats</a>.</p>

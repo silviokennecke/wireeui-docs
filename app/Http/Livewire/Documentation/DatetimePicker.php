@@ -57,7 +57,7 @@ class DatetimePicker extends Component
         id="firstDayOfWeek"
         label="Appointment Date"
         placeholder="Appointment Date"
-        first-day="1"
+        first-day-of-week="1"
         wire:model="firstDayOfWeek"
     />
     HTML;
