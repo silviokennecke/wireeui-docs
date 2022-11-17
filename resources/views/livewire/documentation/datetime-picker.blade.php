@@ -222,7 +222,7 @@
             <x-option-table-row prop="display-format"   required="false" default="localeFormat" type="string" available="All dayjs formats" />
             <x-option-table-row prop="min"              required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
             <x-option-table-row prop="max"              required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
-            <x-option-table-row prop="disable-days"     required="false" default="[]" type="Array<integer|string>" available="Array of weekdays or specific dates supported by Carbon::parse" />
+            <x-option-table-row prop="disable-days"     required="false" default="[]" type="Array<integer|Carbon|DateTimeInterface|string|timestamp>|null" available="Array of weekdays (0-6) or specific dates supported by Carbon::parse" />
         </x-options-table>
 
         <p class="text-gray-500">Read more about <a class="text-indigo-700 underline" target="_blank" href="https://day.js.org/docs/en/display/format">Dayjs formats</a>.</p>
