@@ -76,7 +76,7 @@ class DatetimePicker extends Component
     />
     HTML;
 
-    public ?string $disableDays = null;
+    public ?string $disableDays = '2022-12-13 10:30:00';
 
     public string $disableDaysExample = <<<HTML
     <x-datetime-picker
@@ -86,7 +86,7 @@ class DatetimePicker extends Component
         placeholder="Appointment Date"
         min="2022-12-01"
         max="2022-12-31"
-        :disabled-days='[0, 6, "2022-12-25", "2022-12-26"]'
+        :disabled-days='[0, 6, "2022-12-06", "2022-12-25", "2022-12-26"]'
     />
     HTML;
 

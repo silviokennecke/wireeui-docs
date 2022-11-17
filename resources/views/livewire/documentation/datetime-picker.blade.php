@@ -172,6 +172,19 @@
         :code="$disableDaysExample">
         <div class="flex justify-center">
             <div class="sm:max-w-md sm:px-16">
+                <ul class="dark:text-gray-400 mb-2">
+                    <li>
+                        <b>Disabled days:</b><br>
+                        <ul>
+                            <li>0 (Sunday)</li>
+                            <li>6 (Saturday)</li>
+                            <li>2022-12-06</li>
+                            <li>2022-12-25</li>
+                            <li>2022-12-26</li>
+                        </ul>
+                    </li>
+                </ul>
+
                 <x-datetime-picker
                     id="disable-days-input"
                     without-timezone
@@ -180,7 +193,7 @@
                     wire:model.defer="disableDays"
                     min="2022-12-01"
                     max="2022-12-31"
-                    :disabled-days='[0, 6, "2022-12-25", "2022-12-26"]'
+                    :disabled-days='[0, 6, "2022-12-06", "2022-12-25", "2022-12-26"]'
                 />
             </div>
         </div>
