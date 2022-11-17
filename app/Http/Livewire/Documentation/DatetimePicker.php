@@ -50,6 +50,18 @@ class DatetimePicker extends Component
     />
     HTML;
 
+    public ?string $firstDayOfWeek = '';
+
+    public string $firstDayOfWeekExample = <<<HTML
+    <x-datetime-picker
+        id="firstDayOfWeek"
+        label="Appointment Date"
+        placeholder="Appointment Date"
+        first-day="1"
+        wire:model="firstDayOfWeek"
+    />
+    HTML;
+
     public ?string $mixAndMaxDates = null;
 
     public string $mixAndMaxDatesExample = <<<HTML

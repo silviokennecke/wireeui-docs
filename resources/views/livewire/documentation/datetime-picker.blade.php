@@ -6,6 +6,7 @@
                 <x-summary.item href="#custom-format" label="Custom Datetime Format" />
                 <x-summary.item href="#display-format" label="Custom Display Format" />
                 <x-summary.item href="#without-timezone" label="Without Timezone" />
+                <x-summary.item href="#first-day-of-week" label="Different first day of week" />
                 <x-summary.item href="#min-max-dates" label="Min & Max dates" />
                 <x-summary.item href="#min-max-times" label="Min & Max times" />
             </x-summary.header>
@@ -104,6 +105,31 @@
     </x-code-preview>
 
     <x-code-preview
+        title="Different first day of week"
+        href="#first-day-of-week"
+        id="first-day-of-week"
+        language="html"
+        :code="$firstDayOfWeekExample">
+        <div class="flex justify-center">
+            <div class="sm:max-w-md ssm:px-16">
+                <ul class="dark:text-gray-400 mb-2">
+                    <li>
+                        <b>First Day:</b> 1 (Monday)
+                    </li>
+                </ul>
+
+                <x-datetime-picker
+                    id="firstDayOfWeek"
+                    label="Appointment Date"
+                    placeholder="Appointment Date"
+                    first-day="1"
+                    wire:model="firstDayOfWeek"
+                />
+            </div>
+        </div>
+    </x-code-preview>
+
+    <x-code-preview
         title="Min & Max dates"
         href="#min-max-dates"
         id="min-max-dates"
@@ -180,6 +206,7 @@
             <x-option-table-row prop="without-time"     required="false" default="false" type="boolean" available="boolean" />
             <x-option-table-row prop="interval"         required="false" default="10" type="string|number" available="boolean" />
             <x-option-table-row prop="time-format"      required="false" default="12" type="string"        available="12|24" />
+            <x-option-table-row prop="first-day"        required="false" default="0" type="number"        available="Day of week (0-6)" />
             <x-option-table-row prop="timezone"         required="false" default="UTC" type="string" available="All js available timezones" />
             <x-option-table-row prop="user-timezone"    required="false" default="real user timezone" type="string" available="All js available timezones" />
             <x-option-table-row prop="parse-format"     required="false" default="ISO8601" type="string" available="All dayjs formats" />
