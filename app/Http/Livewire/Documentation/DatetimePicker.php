@@ -76,6 +76,20 @@ class DatetimePicker extends Component
     />
     HTML;
 
+    public ?string $disableDays = null;
+
+    public string $disableDaysExample = <<<HTML
+    <x-datetime-picker
+        id="disable-days-input"
+        without-timezone
+        label="Appointment Date"
+        placeholder="Appointment Date"
+        min="2022-12-01"
+        max="2022-12-31"
+        :disabled-days='[0, 6, "2022-12-25", "2022-12-26"]'
+    />
+    HTML;
+
     public function render()
     {
         return view('livewire.documentation.datetime-picker')->layout(Documentation::class);

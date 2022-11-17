@@ -8,6 +8,7 @@
                 <x-summary.item href="#without-timezone" label="Without Timezone" />
                 <x-summary.item href="#min-max-dates" label="Min & Max dates" />
                 <x-summary.item href="#min-max-times" label="Min & Max times" />
+                <x-summary.item href="#disable-days" label="Disable weekdays or specific dates" />
             </x-summary.header>
 
             <x-summary.header href="#datetime-picker-options" label="Datetime Picker Options" />
@@ -163,6 +164,28 @@
         </div>
     </x-code-preview>
 
+    <x-code-preview
+        title="Disable weekdays or specific dates"
+        href="#disable-days"
+        id="disable-days"
+        language="html"
+        :code="$disableDaysExample">
+        <div class="flex justify-center">
+            <div class="sm:max-w-md sm:px-16">
+                <x-datetime-picker
+                    id="disable-days-input"
+                    without-timezone
+                    label="Appointment Date"
+                    placeholder="Appointment Date"
+                    wire:model.defer="disableDays"
+                    min="2022-12-01"
+                    max="2022-12-31"
+                    :disabled-days='[0, 6, "2022-12-25", "2022-12-26"]'
+                />
+            </div>
+        </div>
+    </x-code-preview>
+
     <div id="datetime-picker-options">
         <x-section.title href="#datetime-picker-options" title="Datetime Picker Options" />
         <div class="mt-5 prose xl:max-w-3xl xl:mb-8 text-gray-500">
@@ -186,6 +209,7 @@
             <x-option-table-row prop="display-format"   required="false" default="localeFormat" type="string" available="All dayjs formats" />
             <x-option-table-row prop="min"              required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
             <x-option-table-row prop="max"              required="false" default="null" type="Carbon|DateTimeInterface|string|timestamp|null" available="All Suported Carbon::parse dates" />
+            <x-option-table-row prop="disable-days"     required="false" default="[]" type="Array<integer|string>" available="Array of weekdays or specific dates supported by Carbon::parse" />
         </x-options-table>
 
         <p class="text-gray-500">Read more about <a class="text-indigo-700 underline" target="_blank" href="https://day.js.org/docs/en/display/format">Dayjs formats</a>.</p>
